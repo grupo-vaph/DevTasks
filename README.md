@@ -1,16 +1,48 @@
-# React + Vite
+# DevTasks — Lista de Tarefas do Programador
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido para o **Checkpoint 4** da disciplina de **Front-End**.
 
-Currently, two official plugins are available:
+**Professor:** Wellington Cidade Silva
+**Turma:** 1ESPJ
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Integrantes
 
-## React Compiler
+| Nome | RM |
+|------|----|
+| Enzo Gabriel Pereira | 570659 |
+| Pedro Henrique Moura Aguiar | 570715 |
+| Victor Ulisses de Morais Silva | 572634 |
+| Henrique Giusti de Souza | 570766 |
+| Pietro Alexandre Guerato | 571232 |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## Link do repositório
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://github.com/grupo-vaph/DevTasks
+
+## Sobre o projeto
+
+Sistema de gerenciamento de tarefas voltado para desenvolvedores, construído em **React + Vite**, com persistência de dados via **localStorage**.
+
+## Funcionalidades
+
+- Cadastro de tarefas com Nome, Data, Descrição e Nível de Prioridade
+- Marcar tarefa como concluída / reabrir
+- Remover tarefas
+- Filtros: Todas, Pendentes, Concluídas
+- Persistência automática dos dados no `localStorage`
+
+## Tecnologias utilizadas
+
+- React
+- Vite
+- CSS
+- JavaScript
+- Git / GitHub
+
+## Como rodar o projeto
+
+\`\`\`bash
+npm install
+npm run dev
+\`\`\`
