@@ -1,4 +1,4 @@
-import Tarefas from './components/Tarefas'
+import Tarefas from './componentes/Tarefas'
 
 const App = () => {
   return (
