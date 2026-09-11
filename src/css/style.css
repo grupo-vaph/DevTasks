@@ -1,0 +1,213 @@
+/* Variáveis de cores */
+:root {
+    --bg-color: #1e1e2f;
+    --container-bg: #27293d;
+    --text-color: #f1f1f1;
+    --text-light: #a0a0b8;
+    --primary-color: #4a90e2;
+    --primary-hover: #357abd;
+    --danger-color: #e74c3c;
+    --danger-hover: #c0392b;
+    --success-color: #2ecc71;
+    --border-color: #3a3c52;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    --prioridade-alta: #e74c3c;
+    --prioridade-media: #f1c40f;
+    --prioridade-baixa: #2ecc71;
+}
+
+/* Reset básico e centralização da página */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+}
+
+/* Container principal */
+.app-container {
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    width: 100%;
+    max-width: 550px;
+}
+
+.app-container h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 22px;
+}
+
+/* Formulário */
+.form-tarefa {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-tarefa input,
+.form-tarefa textarea,
+.form-tarefa select {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 14px;
+    outline: none;
+}
+
+.form-tarefa textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+.form-tarefa button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-tarefa button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Filtros */
+.filtro-tarefas {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.filtro-tarefas button {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filtro-tarefas button.filtro-ativo {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Lista de tarefas */
+.lista-tarefas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-tarefa {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: var(--bg-color);
+    padding: 14px;
+    border-radius: 8px;
+    border-left: 4px solid var(--border-color);
+}
+
+.item-tarefa.prioridade-alta { border-left-color: var(--prioridade-alta); }
+.item-tarefa.prioridade-media { border-left-color: var(--prioridade-media); }
+.item-tarefa.prioridade-baixa { border-left-color: var(--prioridade-baixa); }
+
+.item-tarefa.concluida {
+    opacity: 0.5;
+}
+
+.item-tarefa.concluida .item-tarefa-nome {
+    text-decoration: line-through;
+}
+
+.item-tarefa-info {
+    flex: 1;
+}
+
+.item-tarefa-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-tarefa-nome {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.item-tarefa-prioridade {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.item-tarefa-data {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.item-tarefa-descricao {
+    font-size: 14px;
+    color: var(--text-light);
+    margin: 6px 0 0;
+}
+
+.item-tarefa-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.item-tarefa-acoes button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    color: white;
+}
+
+.item-tarefa-acoes button:first-child {
+    background-color: var(--success-color);
+}
+
+.item-tarefa-acoes button:last-child {
+    background-color: var(--danger-color);
+}
+
+.item-tarefa-acoes button:last-child:hover {
+    background-color: var(--danger-hover);
+}
+
+/* Mensagem de lista vazia */
+.mensagem-vazia {
+    text-align: center;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 20px;
+}
